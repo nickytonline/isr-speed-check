@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function Links() {
+export default function Links() {
   return (
     <nav>
       <ul>

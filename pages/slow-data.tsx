@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Links } from "./components/Links";
+import Links from "./components/Links";
 
 let counter = 0;
 
