@@ -29,9 +29,11 @@ export default function Home({ message }: Payload) {
 }
 
 export async function getStaticProps() {
-  const message = await Promise.resolve(
-    `This is some fast data reloading for the ${++counter} time`
-  );
+  const message = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`This is some slow data reloading for the ${++counter} time`);
+    }, 8000); // Simulate a slow API call
+  });
 
   return {
     props: {
